@@ -416,8 +416,6 @@ console.log(Pepito.saludar(Jose));
 /**
  * Extendiendo una clase
 Al igual que en otros lenguajes es posible extender una clase agregando extends ClaseBase luego del nombre de la nueva clase.
- */
-
 class persona {
   constructor(apellido) {
     this.apellido = apellido;
@@ -439,6 +437,27 @@ class asociado extends persona {
 }
 let asociadonuevo = new asociado('asociadonuevo');
 console.log(asociadonuevo.ahorro());
+ */
+
+/***
+ * Métodos estáticos
+También es posible definir métodos estáticos que se pueden ejecutar sin necesidad de instanciar la clase simplemente agregando static antes del nombre del método (el método constructor no puede ser estático).
+ */
+
+class calculadora {
+  static sumar(...numeros) {
+    let resultado = 0;
+
+    numeros.forEach(numero => {
+      resultado += numero;
+    });
+
+    return resultado;
+  }
+}
+
+console.log(calculadora.sumar(1,2,3));
+
 
 
 
