@@ -360,13 +360,51 @@ console.log(eArr.next());
 Este es un nuevo bucle similar a for...in donde la variable que usamos para recorrer un array devuelve el valor de cada elemento y no la posición.
 
 Este bucle sirve perfectamente para recorrer un Iterator.
- */
-
 let arr = ['andres','felipe','naranjo'];
 
 for (let n of arr) {
   console.log(n);
 }
+ */
+
+/**
+ * Proxies
+
+Los proxies de ES6 te permiten interceptar y personalizar las distintas operaciones que se pueden realizar en un objeto.
+ */
+
+let Jose = {
+  nombre: 'Don Jose'
+};
+
+let proxy = new Proxy(Jose, {
+  get(target, propiedad) {
+    let mensaje = `obteniendo ${propiedad}:
+${target[propiedad]}`;
+    console.log(mensaje);
+  }
+});
+
+proxy.nombre;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
