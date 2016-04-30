@@ -394,8 +394,6 @@ Desde ES6 se incorporan al lenguaje clases para poder hacer POO más facilmente 
 
 Definición de clase
 Para definir una clase simplemente se usa la palabra class seguida del nombre de la clase y luego entre llaves los métodos de esta.
- */
-
 class Persona{
   constructor(nombre) {
     this.honorifico = 'Don';
@@ -411,6 +409,36 @@ let Jose   = new Persona('Jose');
 
 console.log(Jose.saludar(Pepito));
 console.log(Pepito.saludar(Jose));
+
+ */
+
+
+/**
+ * Extendiendo una clase
+Al igual que en otros lenguajes es posible extender una clase agregando extends ClaseBase luego del nombre de la nueva clase.
+ */
+
+class persona {
+  constructor(apellido) {
+    this.apellido = apellido;
+  }
+
+  ahorro() {
+    return 'mi ahorro'
+  };
+}
+class asociado extends persona {
+  constructor(nombre) {
+    super('asociado');
+    this.nombre = nombre;
+  }
+
+  ahorro() {
+    return `${this.nombre} este es ${super.ahorro()}`;
+  }
+}
+let asociadonuevo = new asociado('asociadonuevo');
+console.log(asociadonuevo.ahorro());
 
 
 
