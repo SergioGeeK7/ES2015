@@ -121,7 +121,6 @@ Este nuevo método permite asignar propiedades de uno o más objetos a otro obje
 Esta propiedad es muy útil para realizar herencia entre objetos.
 
 Este método se puede utilizar ya gracias a un polyfill
- */
 
 let obj1 = {
   prop1: 'valor'
@@ -135,10 +134,30 @@ let obj3 = {
 
 let obj4 = Object.assign({}, obj1, obj2, obj3);
 console.log(obj4);
+*/
 
+/**
+ * Object.is(valor1, valor2)
+Este nuevo método sirve para comparar si dos valores son iguales, devuelve true si ambos son:
 
+undefined
+null
+true o false
+strings con el mismo largo y los mismos caracteres
+el mismo objeto
+números y ambos:
+son mayores a 0
+son menores a 0
+son NaN
+no son 0, no son NaN y son el mismo número
+Al igual que .assign() se puede utilizar ya mismo mediante un polyfill.
+ */
 
+let obj1 = { nombre: 'valor' }
+let obj2 = { nombre: 'valor' };
 
+console.log(Object.is(obj1, obj1));
+console.log(Object.is(obj1, obj2));
 
 
 
