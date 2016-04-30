@@ -41,13 +41,36 @@ function obtenerdatos(id,fn){
 }
 
 console.log('se ejecuta antes')
- */
 
 var id = document.getElementById("button")
 
 id.addEventListener('click',function(ev){
     console.log('dio clic')
 })
+ */
+
+
+/***
+ * class es5
+ */
+
+var persona = function persona(nombre, tipo) {
+	this.nombre =nombre 
+	this.tipo = tipo;
+}
+
+var Persona = new persona('andres','a')
+var Persona2 = new persona('mario','b')
+
+persona.prototype.edad = function(valor){
+    return valor 
+}
+
+Persona.edad = 20
+console.log(Persona2.edad)
+console.log(Persona.edad)
+
+
 
 
 
