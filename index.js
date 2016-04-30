@@ -516,7 +516,7 @@ import { sumar } from './index.js';
 
 /**
  * Map Son objetos iterables mediante distintas formas, incluyendo la posibilidad de obtener una instancia de un Iterator.
- */
+
 // creamos un mapa de múltiples elementos iniciales
 let map = new Map([
   [1, 'foo'],
@@ -553,7 +553,37 @@ map.clear(); // lo vaciamos
 
 size = map.size;
 console.log(size);
+*/
 
+/***
+ * Set
+Los Set son otro tipo de estructura de datos que permite en este caso guardar valores arbitrarios, sin necesidad de una llave que sirva para acceder a estos. A cambio de no usar una llave para cada valor estos no se pueden repetir. Al igual que los Map estos son iterables.
+
+ */
+
+let persona = { nombre: 'Pepito' };
+
+let set = new Set([1, 'foo', 3.14, persona]);
+
+console.log(set.size);
+
+console.log(set.has(1));
+
+set.add('bar');
+
+set.delete(persona);
+
+set.forEach(v => console.log(v));
+
+for (let values of set) {
+  console.log(values);
+}
+
+let values = set.values();
+console.log(values.next());
+console.log(values.next());
+console.log(values.next());
+console.log(values.next());
 
 
 
