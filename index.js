@@ -250,11 +250,22 @@ console.log(sumar(3));
 /**
  * Función sin parámetros
 También son necesarios los paréntesis si queremos crear una función que no reciba parámetros.
- */
-
 let saludar = () => 'Hola Don Pepito'
 console.log(saludar());
+ */
 
+
+/***
+ * Función con cuerpo
+Por último, si la función tiene más de una línea (o no devuelve ningún valor) es necesario utilizar las llaves.
+ */
+
+let saludar = persona => {
+  let { nombre, honorifico } = persona;
+  let mensaje = `Hola ${honorifico} ${nombre}`;
+  return mensaje;
+}
+console.log(saludar({ nombre: 'Pepito', honorifico: 'Don' }));
 
 
 
