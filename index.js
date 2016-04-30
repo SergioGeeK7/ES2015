@@ -442,8 +442,6 @@ console.log(asociadonuevo.ahorro());
 /***
  * Métodos estáticos
 También es posible definir métodos estáticos que se pueden ejecutar sin necesidad de instanciar la clase simplemente agregando static antes del nombre del método (el método constructor no puede ser estático).
- */
-
 class calculadora {
   static sumar(...numeros) {
     let resultado = 0;
@@ -457,7 +455,33 @@ class calculadora {
 }
 
 console.log(calculadora.sumar(1,2,3));
+ */
 
+/**
+ * Getters y Setters
+Por último también es posible definir getter y setters agregando get o set antes del nombre de un método
+
+ */
+
+
+class Persona {
+  constructor(nombre) {
+    this._nombre = nombre;
+  }
+
+  get nombre() {
+    return this._nombre;
+  }
+
+  set nombre(nuevo) {
+    this._nombre = nuevo;
+  }
+}
+
+let Pepito = new Persona('Pepito');
+console.log(Pepito.nombre);
+Pepito.nombre = 'Don Pepito';
+console.log(Pepito.nombre);
 
 
 
