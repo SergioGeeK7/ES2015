@@ -231,12 +231,20 @@ Función de un solo parámetro
 Al crear una arrow function de un solo parámetro no es necesario escribír los paréntesis.
 
 Como se puede ver en el ejemplo tampoco es necesario escribír las llaves siempre. Esto ocurre solo cuando la función es de una sola línea y devuelve un valor.
- */
-
 let sumarUno = x => x + 1;
 console.log(sumarUno(23));
+ */
 
 
+
+/***
+ * Función de varios parámetros
+En el caso de que queramos utilizar más de un parámetro ahí sí es necesario envolver el nombre de estos entre paréntesis
+ */
+
+let sumar = (x, y = 1) => x + y;
+console.log(sumar(2, 4));
+console.log(sumar(3));
 
 
 
