@@ -273,7 +273,6 @@ console.log(saludar({ nombre: 'Pepito', honorifico: 'Don' }));
 Los parámetros rest son una forma de utilizar parámetros virtualmente infinitos (nunca supe de ningún límite) en una función que vendría a substituír al array arguments que tienen actualmente las funciones.
 
 Los parámetros rest se definen agregando ... adelante del nombre que se le quiera asignar al mismo. El parámetro rest tiene que ser siempre el último parámetro de una función.
- */
 
 function sumar (a, b, ...c) {
   let resultado = a + b;
@@ -289,8 +288,34 @@ console.log(sumar(1,2,3));
 console.log(sumar(1,2,3,4));
 console.log(sumar(1,2,3,4,5));
 
+ */
 
+/***
+ * Promesas
 
+Las promesas es algo que se viene usando ya desde hace un par de años gracias a librerías como Q.
+
+En ES6 las promesas van a pasar a tener soporte nativo del lenguaje con una sintaxis bastante simple.
+ */
+
+function obtenerDatos () {
+  return new Promise((resolve, reject) => {
+    let n = Math.floor(Math.random() * 2) + 1;
+
+    setTimeout(() => {
+      if (n === 1) resolve('Datos obtenidos');
+      else reject(new Error('Hubo un error al obtener los datos'))
+    }, 500);
+  });
+}
+
+obtenerDatos()
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
 
 
 
