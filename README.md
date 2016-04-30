@@ -13,3 +13,6 @@ babel-node index.js --presets es2015
 git checkout nametags
 git tag -a "nametag" -m "message"
 git push origin --tags 
+
+git branch es5
+git checkout es5

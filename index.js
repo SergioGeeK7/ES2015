@@ -625,7 +625,7 @@ if (wSet.has(obj)) {
   wSet.delete(obj);
 }
 
-*/
+
 
 // ¿Cómo funciona this?
 
@@ -669,6 +669,8 @@ var elements = document.getElementsByTagName('*');
 for(var i=0 ; i<elements.length ; i++){
 elements[i].addEventListener('click', o.f, false);
 }
+
+*/
 
 
 
