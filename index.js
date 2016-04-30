@@ -151,13 +151,28 @@ son menores a 0
 son NaN
 no son 0, no son NaN y son el mismo número
 Al igual que .assign() se puede utilizar ya mismo mediante un polyfill.
- */
-
 let obj1 = { nombre: 'valor' }
 let obj2 = { nombre: 'valor' };
 
 console.log(Object.is(obj1, obj1));
 console.log(Object.is(obj1, obj2));
+ */
+
+/**
+ * Forma abreviada de definición de objetos 
+ * Asignación de propiedades
+Con ES6 ahora va a ser mucho más simple (y lógico) utilizar una variable para definir el valor de una propiedad de un objeto.
+ */
+
+let nombre  = 'Jose';
+let persona = {
+  nombre,
+  honorifico: 'Don'
+};
+console.log(persona);
+
+
+
 
 
 
