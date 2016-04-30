@@ -371,8 +371,7 @@ for (let n of arr) {
  * Proxies
 
 Los proxies de ES6 te permiten interceptar y personalizar las distintas operaciones que se pueden realizar en un objeto.
- */
-
+ 
 let Jose = {
   nombre: 'Don Jose'
 };
@@ -386,9 +385,32 @@ ${target[propiedad]}`;
 });
 
 proxy.nombre;
+*/
 
+/***
+ * Clases
 
+Desde ES6 se incorporan al lenguaje clases para poder hacer POO más facilmente (sin prototype). Las clases de ES6 son solo un syntax sugar de la como se hace actualmente con prototype.
 
+Definición de clase
+Para definir una clase simplemente se usa la palabra class seguida del nombre de la clase y luego entre llaves los métodos de esta.
+ */
+
+class Persona{
+  constructor(nombre) {
+    this.honorifico = 'Don';
+    this.nombre = nombre;
+  }
+  saludar(persona) {
+    return `Hola ${persona.honorifico} ${persona.nombre}`;
+  }
+}
+
+let Pepito = new Persona('Pepito');
+let Jose   = new Persona('Jose');
+
+console.log(Jose.saludar(Pepito));
+console.log(Pepito.saludar(Jose));
 
 
 
