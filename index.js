@@ -345,9 +345,6 @@ for (let i = 0; i < 5; i++) {
 
 Iterators
 Los Iterators son un tipo de objeto que nos permite iterarlos usando el método .next() (los generadores son instancias de Iterator).
- */
-
-
 let arr  = ['foo','bar','baz'];
 
 let eArr = arr.entries();
@@ -356,6 +353,20 @@ console.log(eArr.next());
 console.log(eArr.next());
 console.log(eArr.next());
 console.log(eArr.next());
+ */
+
+/**
+ * for...of
+Este es un nuevo bucle similar a for...in donde la variable que usamos para recorrer un array devuelve el valor de cada elemento y no la posición.
+
+Este bucle sirve perfectamente para recorrer un Iterator.
+ */
+
+let arr = ['andres','felipe','naranjo'];
+
+for (let n of arr) {
+  console.log(n);
+}
 
 
 
