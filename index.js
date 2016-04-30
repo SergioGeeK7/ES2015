@@ -615,8 +615,6 @@ Similar a un Set, con laa diferencia de que no pueden ser iterador como un Set y
 
 Al no se iterables solo sirven para poder asignar objetos a valores boleanos que permite comprobar si un objeto está o no está en el WeakSet.
 
- */
-
 let wSet = new WeakSet();
 
 let obj = { first: 'value' };
@@ -627,11 +625,50 @@ if (wSet.has(obj)) {
   wSet.delete(obj);
 }
 
+*/
+
+// ¿Cómo funciona this?
+
+var arr = [1,2,3];
+var out = [];
+for(var i = 0; i<arr.length;i++) {
+var item = arr[i];
+out.push(function(){ console.log(item); });
+}
+out.forEach(function(func){ func(); });
+
+
+var arr = [1,2,3];
+var out = [];
+for(var i = 0; i<arr.length;i++) {
+(function(value){
+var item = value;
+out.push(function(){ console.log(item); });
+})(arr[i]);
+}
+out.forEach(function(func){ func(); });
 
 
 
+var o = {
+prop: 37,
+f: function() {
+return this.prop;
+}
+};
+console.log(o.f()); // logs 37
 
 
+var o = {
+prop: 37,
+f: function() {
+console.log(this.tagName);
+}
+};
+var elements = document.getElementsByTagName('*');
+for(var i=0 ; i<elements.length ; i++){
+elements[i].addEventListener('click', o.f, false);
+}
 
 
 
