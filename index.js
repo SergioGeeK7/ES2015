@@ -296,8 +296,6 @@ console.log(sumar(1,2,3,4,5));
 Las promesas es algo que se viene usando ya desde hace un par de años gracias a librerías como Q.
 
 En ES6 las promesas van a pasar a tener soporte nativo del lenguaje con una sintaxis bastante simple.
- */
-
 function obtenerDatos () {
   return new Promise((resolve, reject) => {
     let n = Math.floor(Math.random() * 2) + 1;
@@ -316,6 +314,29 @@ obtenerDatos()
   .catch(error => {
     console.log(error);
   });
+ */
+
+/***
+ * Generadores
+
+Los generadores son un tipo de función especial que permite parar la ejecución de la misma y devolver un valor, para luego poder seguír ejecutándola.
+ */
+
+function* datos() {
+  let anterior = 0, actual = 1;
+  while(true) {
+    let temp = anterior;
+    anterior = actual;
+    actual  += temp;
+    yield actual;
+  }
+}
+
+let valor = datos();
+
+for (let i = 0; i < 5; i++) {
+  console.log(valor.next());
+}
 
 
 
