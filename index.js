@@ -210,12 +210,31 @@ console.log(y);
 Algo que siempre falto en JS al momento de definir funciones eran los parámetros con valores por defecto, siendo la única forma de lograr esto redefinir el valor de un parámetro con el mismo parámetro o el valor por defecto (no muy optimo que digamos).
 
 Con ES6 ahora es completamente posible definir un valor por defecto a los parámetros de nuestras funciones al igual que en otros lenguajes de programación.
- */
+
 function saludar (nombre, honorifico = 'Don') {
   return `Hola ${honorifico} ${nombre}`;
 }
 console.log(saludar('Pepito', 'Don'));
 console.log(saludar('Jose'));
+
+ */
+
+
+/**
+ * Arrow functions
+
+Arrow function es una nueva forma de definir funciones en JS similar a como hace CoffeeScript.
+
+Hay distintas variantes en la sintaxis de las arrow function.
+
+Función de un solo parámetro
+Al crear una arrow function de un solo parámetro no es necesario escribír los paréntesis.
+
+Como se puede ver en el ejemplo tampoco es necesario escribír las llaves siempre. Esto ocurre solo cuando la función es de una sola línea y devuelve un valor.
+ */
+
+let sumarUno = x => x + 1;
+console.log(sumarUno(23));
 
 
 
