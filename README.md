@@ -31,3 +31,14 @@ npm install --save-dev browserify
 npm run build-js
 babeljs.io
 npm install --save-dev babelify babel-preset-es2015
+
+
+
+
+
+
+
+
+
+
+
