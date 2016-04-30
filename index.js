@@ -186,8 +186,6 @@ console.log(pepito.saludar({ nombre:'Jose', honorifico:'Don' }));
  * Asignación por descomposición
 
 Si ya dijimos que con ES6 nos es más fácil crear objetos usando variables, también nos vas a ser más fácil hacer lo contrarios, descomponer un objeto (o un array) en variables
- */
-
 // objetos
 let persona = {
   nombre: 'Jose',
@@ -203,6 +201,23 @@ let fecha    = [24, 4, 2015];
 let [d, , y] = fecha;
 console.log(d);
 console.log(y);
+
+ */
+
+/**
+ * Parámetros por defecto
+
+Algo que siempre falto en JS al momento de definir funciones eran los parámetros con valores por defecto, siendo la única forma de lograr esto redefinir el valor de un parámetro con el mismo parámetro o el valor por defecto (no muy optimo que digamos).
+
+Con ES6 ahora es completamente posible definir un valor por defecto a los parámetros de nuestras funciones al igual que en otros lenguajes de programación.
+ */
+function saludar (nombre, honorifico = 'Don') {
+  return `Hola ${honorifico} ${nombre}`;
+}
+console.log(saludar('Pepito', 'Don'));
+console.log(saludar('Jose'));
+
+
 
 
 
