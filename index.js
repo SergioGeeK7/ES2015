@@ -258,8 +258,6 @@ console.log(saludar());
 /***
  * Función con cuerpo
 Por último, si la función tiene más de una línea (o no devuelve ningún valor) es necesario utilizar las llaves.
- */
-
 let saludar = persona => {
   let { nombre, honorifico } = persona;
   let mensaje = `Hola ${honorifico} ${nombre}`;
@@ -267,7 +265,29 @@ let saludar = persona => {
 }
 console.log(saludar({ nombre: 'Pepito', honorifico: 'Don' }));
 
+ */
 
+/***
+ * Parámetros rest
+
+Los parámetros rest son una forma de utilizar parámetros virtualmente infinitos (nunca supe de ningún límite) en una función que vendría a substituír al array arguments que tienen actualmente las funciones.
+
+Los parámetros rest se definen agregando ... adelante del nombre que se le quiera asignar al mismo. El parámetro rest tiene que ser siempre el último parámetro de una función.
+ */
+
+function sumar (a, b, ...c) {
+  let resultado = a + b;
+
+  c.forEach(n => {
+    resultado += n;
+  });
+
+  return resultado;
+}
+console.log(sumar(1,2));
+console.log(sumar(1,2,3));
+console.log(sumar(1,2,3,4));
+console.log(sumar(1,2,3,4,5));
 
 
 
