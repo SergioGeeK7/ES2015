@@ -62,7 +62,6 @@ console.log(0b1001);
 /**
  * Math 
  * En ES6 se agregan una lista de nuevos métodos al objeto Math, casi todos ya están soportados desde hace un par de años en los navegadores.
- */
 
 .acosh()
 .asinh()
@@ -84,6 +83,37 @@ console.log(0b1001);
 
 ver 
 https://developer.mozilla.org/en-US/
+
+ */
+
+/**
+ * métodos arrays
+ * Array.from(array, mapFn)
+Este nuevo método del objeto Array permite crear un array copiando otro array o un NodeList.
+
+Es posible utilizarlos actualmente mediantes polyfills.
+ */
+
+let arr1 = [1,2,3];
+let arr2 = Array.from(arr1, v => --v);
+arr2.push(3);
+console.log(arr1);
+console.log(arr2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
