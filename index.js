@@ -240,11 +240,21 @@ console.log(sumarUno(23));
 /***
  * Función de varios parámetros
 En el caso de que queramos utilizar más de un parámetro ahí sí es necesario envolver el nombre de estos entre paréntesis
- */
 
 let sumar = (x, y = 1) => x + y;
 console.log(sumar(2, 4));
 console.log(sumar(3));
+ */
+
+
+/**
+ * Función sin parámetros
+También son necesarios los paréntesis si queremos crear una función que no reciba parámetros.
+ */
+
+let saludar = () => 'Hola Don Pepito'
+console.log(saludar());
+
 
 
 
