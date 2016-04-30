@@ -508,29 +508,51 @@ export default Persona;
 /***
 Importando de forma síncrona
 Para importar hay dos forma, la primera es la forma síncrona, esta a su vez tiene varias forma. pero todas se basan es usa import seguido del nombre que se le quiere dar al módulo a importar y luego from y la ubicación del módulo en un string.
- */
-
 // desde Exportación única
 import Persona from './index.js';
 
 import { sumar } from './index.js';
+ */
 
+/**
+ * Map Son objetos iterables mediante distintas formas, incluyendo la posibilidad de obtener una instancia de un Iterator.
+ */
+// creamos un mapa de múltiples elementos iniciales
+let map = new Map([
+  [1, 'foo'],
+  ['bar', 2],
+  ['baz', 'baz']
+]);
 
+let size = map.size; // obtenemos el tamaño del mapa
+console.log(size);
 
+// distintas formas de iterar un mapa
+map.forEach(v => {
+  console.log(v);
+});
 
+for (let key of map.keys()) {
+  console.log(key);
+}
 
+for (let value of map.values()) {
+  console.log(value);
+}
 
+for (let entrie of map.entries()) {
+  console.log(entrie);
+}
 
+let keys = map.keys();
+console.log(keys.next());
+console.log(keys.next());
+console.log(keys.next());
 
+map.clear(); // lo vaciamos
 
-
-
-
-
-
-
-
-
+size = map.size;
+console.log(size);
 
 
 
