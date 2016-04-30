@@ -10,3 +10,6 @@ npm install --save-dev babel-cli
 npm install --save-dev babel-preset-es2015
 babel-node index.js --presets es2015
 
+git checkout nametags
+git tag -a "nametag" -m "message"
+git push origin --tags 
