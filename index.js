@@ -92,13 +92,49 @@ https://developer.mozilla.org/en-US/
 Este nuevo método del objeto Array permite crear un array copiando otro array o un NodeList.
 
 Es posible utilizarlos actualmente mediantes polyfills.
- */
-
 let arr1 = [1,2,3];
 let arr2 = Array.from(arr1, v => --v);
 arr2.push(3);
 console.log(arr1);
 console.log(arr2);
+ */
+
+/**
+ *Otros métodos
+Además de .from() se agregaron los siguientes métodos:
+
+.of(): crea un nuevo array con un número variado de elementos
+.fill(): llena un array con un nuevo valor en cada elemento
+.find(): busca un elemento dentro de un array y devuelve el valor
+.findIndex(): similar a .find() pero devuelve el índice
+.entries(): devuelve una instancia del objeto Iterator que contiene cada índice y valor del array
+.keys(): similar a .entries() pero el Iterator solo muestra los índices
+.copyWithin(): copia los elementos de un array en las posiciones indicadas
+ 
+ */
+
+/**
+ * métodos de Object
+ * Object.assign(objetivo, ...objs)
+Este nuevo método permite asignar propiedades de uno o más objetos a otro objeto pisando las propiedades con nombres repetidos por el valor del último objeto indicado.
+
+Esta propiedad es muy útil para realizar herencia entre objetos.
+
+Este método se puede utilizar ya gracias a un polyfill
+ */
+
+let obj1 = {
+  prop1: 'valor'
+};
+let obj2 = {
+  prop2: 'otro valor'
+};
+let obj3 = {
+  prop1: 'nuevo valor'
+};
+
+let obj4 = Object.assign({}, obj1, obj2, obj3);
+console.log(obj4);
 
 
 
