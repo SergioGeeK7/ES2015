@@ -559,7 +559,7 @@ console.log(size);
  * Set
 Los Set son otro tipo de estructura de datos que permite en este caso guardar valores arbitrarios, sin necesidad de una llave que sirva para acceder a estos. A cambio de no usar una llave para cada valor estos no se pueden repetir. Al igual que los Map estos son iterables.
 
- */
+
 
 let persona = { nombre: 'Pepito' };
 
@@ -585,9 +585,47 @@ console.log(values.next());
 console.log(values.next());
 console.log(values.next());
 
+*/
+
+/***
+ * WeakMap
+Similar a un Map, con la diferencia de que no pueden ser iterados como un Map, no poseen el método clear para vaciarlos completamente y el key debe ser un objeto.
+ 
+let wMap = new WeakMap();
+
+let obj = { first: 'value' }
+
+wMap.set(obj, 'mundo');
+
+console.log(wMap.get(obj));
+
+if (wMap.has(obj)) {
+  wMap.delete(obj);
+
+  console.log(wMap.get(obj));
+}
 
 
+*/
 
+/***
+ * 
+ * WeakSet
+Similar a un Set, con laa diferencia de que no pueden ser iterador como un Set y no poseen el método clear para vaciarlos completamente. Solo se pueden guardar objetos.
+
+Al no se iterables solo sirven para poder asignar objetos a valores boleanos que permite comprobar si un objeto está o no está en el WeakSet.
+
+ */
+
+let wSet = new WeakSet();
+
+let obj = { first: 'value' };
+
+wSet.add(obj);
+
+if (wSet.has(obj)) {
+  wSet.delete(obj);
+}
 
 
 
