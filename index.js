@@ -174,14 +174,35 @@ console.log(persona);
 /**
  * Asignación de métodos
 Al igual que es más fácil usar variables en propiedades también se simplificó la forma de definir métodos en un objeto.
- */
-
 let pepito = {
   saludar(persona) {
     return `Hola ${persona.honorifico} ${persona.nombre}`;
   }
 }
 console.log(pepito.saludar({ nombre:'Jose', honorifico:'Don' }));
+ */
+
+/**
+ * Asignación por descomposición
+
+Si ya dijimos que con ES6 nos es más fácil crear objetos usando variables, también nos vas a ser más fácil hacer lo contrarios, descomponer un objeto (o un array) en variables
+ */
+
+// objetos
+let persona = {
+  nombre: 'Jose',
+  honorifico: 'Don'
+};
+
+let { nombre, honorifico: titulo } = persona;
+console.log(nombre);
+console.log(titulo);
+
+// arrays
+let fecha    = [24, 4, 2015];
+let [d, , y] = fecha;
+console.log(d);
+console.log(y);
 
 
 
