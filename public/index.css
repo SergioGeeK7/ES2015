@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+    margin:0;
+}
+
+.app-container{
+    width:100%;
+    overflow:hidden;
+}
+
+.app-header{
+    width:100%;
+    background-color: darkblue;
+    height:10vh;
+    position:fixed;
+    
+}
+
+.app-header h1{
+    line-height:10vh;
+    color: white;
+    text-align: center;
+    margin:0;
+}
+
+.app-body{
+    width:80%;
+    padding-top:30px;
+    margin:0 auto;
+    margin-top:10px;
+}
+
+
+
+.show{
+    padding-top:15px;
+    padding-left:15px;
+    width:100%;
+    margin-top:30px;
+    overflow:hidden;
+    background-color: white;    
+    
+}
+
+.img-container{
+    width:20%;
+}
+
+.img-container img{
+    max-width:100%;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+.info{
+    width:75%;
+}
+
+ @media(max-width:600px){
+    .img-container{
+    width:100%;
+    }
+}
+
+
+
