@@ -29,8 +29,40 @@ console.log(DIEZ);
 
 Variables en strings
 Para meter una variable dentro de un template string hay que colocar el nombre de esta variable entre de ${ y } (no solo variables, incluso pueden ejecutar funciones o colocar expresiones como 2+2).
- */
 
 let nombre = 'Don Pepito';
 console.log(`Hola ${nombre}`);
+
+ */
+
+/**
+ * Strings multilínea
+Para poder crear un string multilínea con template strings basta con apretar enter y en la siguiente línea seguír escribiendo.
+ */
+
+let mensaje = `Hola Don Pepito
+Hola Don Jose`;
+console.log(mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
