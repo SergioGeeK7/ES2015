@@ -16,9 +16,21 @@ Algo que sin duda faltaba en JS era las constantes. Con ES6 es posible definir t
 Una constantes como el nombre indica no puede cambiar de valor una vez definida, tiene un valor constante.
 
 Las constantes también tienen un scope de bloque
- */
 
 const DIEZ = 10;
 DIEZ = 5;
 console.log(DIEZ);
+
+ */
+
+/**
+ * template 
+ * los template string son una forma más fácil de crear strings con variables en medio del string o strings multilínea.
+
+Variables en strings
+Para meter una variable dentro de un template string hay que colocar el nombre de esta variable entre de ${ y } (no solo variables, incluso pueden ejecutar funciones o colocar expresiones como 2+2).
+ */
+
+let nombre = 'Don Pepito';
+console.log(`Hola ${nombre}`);
 
