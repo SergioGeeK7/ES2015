@@ -491,8 +491,7 @@ Hay varias formas de exportar e importar módulos con el nuevo sistema.
 
 Exportación única
 La primera forma es cuando tenemos un solo dato a exportar (una función, un objeto, etc.), para esto usamos la siguiente sintaxis.
- */
-
+ 
 class Persona {
   constructor(nombre) {
     this.honorifico = 'Don';
@@ -504,9 +503,17 @@ class Persona {
 }
 
 export default Persona;
+*/
 
+/***
+Importando de forma síncrona
+Para importar hay dos forma, la primera es la forma síncrona, esta a su vez tiene varias forma. pero todas se basan es usa import seguido del nombre que se le quiere dar al módulo a importar y luego from y la ubicación del módulo en un string.
+ */
 
+// desde Exportación única
+import Persona from './index.js';
 
+import { sumar } from './index.js';
 
 
 
