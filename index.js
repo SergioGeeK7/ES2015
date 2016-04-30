@@ -38,11 +38,19 @@ console.log(`Hola ${nombre}`);
 /**
  * Strings multilínea
 Para poder crear un string multilínea con template strings basta con apretar enter y en la siguiente línea seguír escribiendo.
- */
 
 let mensaje = `Hola Don Pepito
 Hola Don Jose`;
 console.log(mensaje);
+
+ */
+
+/**
+ * Números en Octal
+Desde ES6 va a ser posible definir variables usando números en Octal con el siguiente código
+ */
+
+console.log(0o35);
 
 
 
