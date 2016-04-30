@@ -55,9 +55,36 @@ console.log(0o35);
 /**
  * Números en Binario
 Desde ES6 va a ser posible definir variables usando números en Binario con el siguiente código
+console.log(0b1001);
  */
 
-console.log(0b1001);
+
+/**
+ * Math 
+ * En ES6 se agregan una lista de nuevos métodos al objeto Math, casi todos ya están soportados desde hace un par de años en los navegadores.
+ */
+
+.acosh()
+.asinh()
+.atanh()
+.cbrt()
+.clz32()
+.cosh()
+.exp1m()
+.fround()
+.hypot()
+.imul()
+.log10()
+.log1p()
+.log2()
+.sign()
+.sinh()
+.tanh()
+.trunc()
+
+ver 
+https://developer.mozilla.org/en-US/
+
 
 
 
