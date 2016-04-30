@@ -320,8 +320,6 @@ obtenerDatos()
  * Generadores
 
 Los generadores son un tipo de función especial que permite parar la ejecución de la misma y devolver un valor, para luego poder seguír ejecutándola.
- */
-
 function* datos() {
   let anterior = 0, actual = 1;
   while(true) {
@@ -337,10 +335,27 @@ let valor = datos();
 for (let i = 0; i < 5; i++) {
   console.log(valor.next());
 }
+ */
 
 
 
 
+/**
+ * Iterators y for...of
+
+Iterators
+Los Iterators son un tipo de objeto que nos permite iterarlos usando el método .next() (los generadores son instancias de Iterator).
+ */
+
+
+let arr  = ['foo','bar','baz'];
+
+let eArr = arr.entries();
+
+console.log(eArr.next());
+console.log(eArr.next());
+console.log(eArr.next());
+console.log(eArr.next());
 
 
 
