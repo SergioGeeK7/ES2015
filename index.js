@@ -48,9 +48,18 @@ console.log(mensaje);
 /**
  * Números en Octal
 Desde ES6 va a ser posible definir variables usando números en Octal con el siguiente código
- */
 
 console.log(0o35);
+ */
+
+/**
+ * Números en Binario
+Desde ES6 va a ser posible definir variables usando números en Binario con el siguiente código
+ */
+
+console.log(0b1001);
+
+
 
 
 
