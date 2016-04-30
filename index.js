@@ -461,9 +461,6 @@ console.log(calculadora.sumar(1,2,3));
  * Getters y Setters
 Por último también es posible definir getter y setters agregando get o set antes del nombre de un método
 
- */
-
-
 class Persona {
   constructor(nombre) {
     this._nombre = nombre;
@@ -482,6 +479,32 @@ let Pepito = new Persona('Pepito');
 console.log(Pepito.nombre);
 Pepito.nombre = 'Don Pepito';
 console.log(Pepito.nombre);
+*/
+
+/***
+ * 
+ * Módulos
+
+Desde ES6 vamos a tener un sistema nativo de módulos que viene a sustituir a los actuales CommonJS, AMD, etc.
+
+Hay varias formas de exportar e importar módulos con el nuevo sistema.
+
+Exportación única
+La primera forma es cuando tenemos un solo dato a exportar (una función, un objeto, etc.), para esto usamos la siguiente sintaxis.
+ */
+
+class Persona {
+  constructor(nombre) {
+    this.honorifico = 'Don';
+    this.nombre     = nombre;
+  }
+  saludar(persona) {
+    return `Hola ${persona.honorifico} ${persona.nombre}`;
+  }
+}
+
+export default Persona;
+
 
 
 
