@@ -28,8 +28,6 @@ console.log(calculadora(division,1,2))
 
 /**
  * callback asincróno
- */
-
 var id = 10
 
 obtenerdatos(id,function(item){
@@ -43,6 +41,15 @@ function obtenerdatos(id,fn){
 }
 
 console.log('se ejecuta antes')
+ */
+
+var id = document.getElementById("button")
+
+id.addEventListener('click',function(ev){
+    console.log('dio clic')
+})
+
+
 
 
 
