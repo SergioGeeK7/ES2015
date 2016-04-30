@@ -162,7 +162,6 @@ console.log(Object.is(obj1, obj2));
  * Forma abreviada de definición de objetos 
  * Asignación de propiedades
 Con ES6 ahora va a ser mucho más simple (y lógico) utilizar una variable para definir el valor de una propiedad de un objeto.
- */
 
 let nombre  = 'Jose';
 let persona = {
@@ -170,6 +169,22 @@ let persona = {
   honorifico: 'Don'
 };
 console.log(persona);
+ */
+
+/**
+ * Asignación de métodos
+Al igual que es más fácil usar variables en propiedades también se simplificó la forma de definir métodos en un objeto.
+ */
+
+let pepito = {
+  saludar(persona) {
+    return `Hola ${persona.honorifico} ${persona.nombre}`;
+  }
+}
+console.log(pepito.saludar({ nombre:'Jose', honorifico:'Don' }));
+
+
+
 
 
 
